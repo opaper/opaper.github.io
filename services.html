@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+<head>
+    <title>
+      服务匹配- 基于老年人互助养老模式的时间银行
+    </title>
+    <link href="stylesheets/css.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/isotope.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/fullcalendar.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/wizard.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/select2.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/morris.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/timepicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/colorpicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/bootstrap-switch.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/daterange-picker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/typeahead.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/summernote.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/pygments.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" type="text/css" /><link href="stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" type="text/css" /><link href="stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" type="text/css" /><link href="stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" type="text/css" /><script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script><script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script><script src="javascripts/bootstrap.min.js" type="text/javascript"></script><script src="javascripts/raphael.min.js" type="text/javascript"></script><script src="javascripts/selectivizr-min.js" type="text/javascript"></script><script src="javascripts/jquery.mousewheel.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.min.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.sampledata.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.world.js" type="text/javascript"></script><script src="javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script><script src="javascripts/fullcalendar.min.js" type="text/javascript"></script><script src="javascripts/gcal.js" type="text/javascript"></script><script src="javascripts/jquery.dataTables.min.js" type="text/javascript"></script><script src="javascripts/datatable-editable.js" type="text/javascript"></script><script src="javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script><script src="javascripts/excanvas.min.js" type="text/javascript"></script><script src="javascripts/jquery.isotope.min.js" type="text/javascript"></script><script src="javascripts/isotope_extras.js" type="text/javascript"></script><script src="javascripts/modernizr.custom.js" type="text/javascript"></script><script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script><script src="javascripts/select2.js" type="text/javascript"></script><script src="javascripts/styleswitcher.js" type="text/javascript"></script><script src="javascripts/wysiwyg.js" type="text/javascript"></script><script src="javascripts/summernote.min.js" type="text/javascript"></script><script src="javascripts/jquery.inputmask.min.js" type="text/javascript"></script><script src="javascripts/jquery.validate.js" type="text/javascript"></script><script src="javascripts/bootstrap-fileupload.js" type="text/javascript"></script><script src="javascripts/bootstrap-datepicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-timepicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-colorpicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-switch.min.js" type="text/javascript"></script><script src="javascripts/typeahead.js" type="text/javascript"></script><script src="javascripts/daterange-picker.js" type="text/javascript"></script><script src="javascripts/date.js" type="text/javascript"></script><script src="javascripts/morris.min.js" type="text/javascript"></script><script src="javascripts/skycons.js" type="text/javascript"></script><script src="javascripts/fitvids.js" type="text/javascript"></script><script src="javascripts/jquery.sparkline.min.js" type="text/javascript"></script><script src="javascripts/main.js" type="text/javascript"></script><script src="javascripts/respond.js" type="text/javascript"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+  <body>
+    <div class="modal-shiftfix">
+      <!-- Navigation -->
+      <div class="navbar navbar-fixed-top scroll-hide">
+        <div class="container-fluid top-bar">
+          <div class="pull-right">
+            <ul class="nav navbar-nav pull-right">
+              <li class="dropdown notifications hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascrpt:void(0)"><span aria-hidden="true" class="se7en-flag"></span>
+                  <div class="sr-only">
+                    通知
+                  </div>
+                  <p class="counter">
+                    4
+                  </p>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="javascrpt:void(0)">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        助餐服务可以请大厨到家做大餐！
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="javascrpt:void(0)">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        新增助行服务，欢迎体验！
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="javascrpt:void(0)">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        您已累计存入119小时的时间存款！
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="javascrpt:void(0)">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        恭喜您，李兴平！您已成为时间银行的会员！
+                    </p></a>
+                    
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown messages hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascrpt:void(0)"><span aria-hidden="true" class="se7en-envelope"></span>
+                  <div class="sr-only">
+                    消息
+                  </div>
+                  <p class="counter">
+                    3
+                  </p>
+                </a>
+                <ul class="dropdown-menu messages">
+                  <li><a href="javascrpt:void(0)">
+                    <img width="34" height="34" src="images/avatar-female.jpg" />今天能麻烦您跑一趟吗？</a>
+                  </li>
+                  <li><a href="javascrpt:void(0)">
+                    <img width="34" height="34" src="images/avatar-female2.png" />非常感谢你照料父亲的饮食，帮了大忙...</a>
+                  </li>
+                  <li><a href="javascrpt:void(0)">
+                    <img width="34" height="34" src="images/avatar-male2.png" />我是您的助医服务提供者[苏二娘]，正在...</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown settings hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="javascrpt:void(0)"><span aria-hidden="true" class="se7en-gear"></span>
+                  <div class="sr-only" title="设置">
+                    设置
+                  </div>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>蓝</a>
+                  </li>
+                  <li>
+                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>绿</a>
+                  </li>
+                  <li>
+                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>橙</a>
+                  </li>
+                  <li>
+                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>紫</a>
+                  </li>
+                  <li>
+                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>灰</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="javascrpt:void(0)">
+                <img width="34" height="34" src="images/avatar-male.jpg" />李兴平&nbsp;(119h)<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="javascrpt:void(0)">
+                    <i class="icon-user"></i>我的时间银行&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                  <li><a href="javascrpt:void(0)">
+                    <i class="icon-gear"></i>设置</a>
+                  </li>
+                  <li><a href="login.html">
+                    <i class="icon-signout"></i>注销</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index.html">基于老年人互助养老模式的时间银行系统</a>
+          <form class="navbar-form form-inline col-lg-2 hidden-xs">
+            <input class="form-control" placeholder="搜索服务匹配" type="text">
+          </form>
+        </div>
+        <div class="container-fluid main-nav clearfix">
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="index.html"><span aria-hidden="true" class="se7en-home"></span>我的银行</a>
+              </li>
+               <li class="dropdown"><a class="current" data-toggle="dropdown" href="services.html">
+                <span aria-hidden="true" class="se7en-forms"></span>服务<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="services.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      助餐
+                    </p></a>
+                  </li>
+                  <li>
+                    <a href="javascrpt:void(0)">助行</a>
+                  </li>
+                  <li>
+                    <a href="javascrpt:void(0)">助洁</a>
+                  </li>
+                  <li>
+                    <a href="javascrpt:void(0)">助医</a>
+                  </li>
+                  <li>
+                    <a href="javascrpt:void(0)">助急</a>
+                  </li>
+                </ul>
+              </li>
+			  <li><a href="charts.html">
+                <span aria-hidden="true" class="se7en-charts"></span>评价</a>
+              </li>
+              <li><a href="social.html">
+                <span aria-hidden="true" class="se7en-feed"></span>社交</a>
+              </li>
+              <li><a href="social.html">
+                <span aria-hidden="true" class="se7en-star"></span>收藏</a>
+              </li>
+              <li><a href="gallery.html">
+                <span aria-hidden="true" class="se7en-gallery"></span>案例</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Navigation -->
+            <!-- End Navigation -->
+      <div class="container-fluid main-content">
+        <div class="page-title">
+          <h1>
+            服务智能匹配优化
+          </h1>
+        </div>
+        <!-- 步骤流程 -->
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="widget-container fluid-height">
+              <div class="widget-content">
+                <div class="wizard" id="wizard">
+                  <div class="padded">
+                    <ul class="wizard-nav">
+                      <li>
+                        <a data-toggle="tab" href="#tab1">1</a>
+                      </li>
+                      <li>
+                        <a data-toggle="tab" href="#tab2">2 </a>
+                      </li>
+                      <li>
+                        <a data-toggle="tab" href="#tab3">3</a>
+                      </li>
+                    </ul>
+                    <div class="progress progress-striped active">
+                      <div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" class="progress-bar" role="progressbar"></div>
+                    </div>
+                    <div class="tab-content">
+                      <div class="tab-pane" id="tab1">
+                        <h2>
+                          请选择服务类型
+                        </h2>
+                        <form role="form">
+                          <!-- start-->
+                          <div class="col-lg-12">
+                          <div class="row">
+                          <div class="btn-group" style="width=200px">
+                              <button class="btn btn-lg btn-primary-outline dropdown-toggle" data-toggle="dropdown">助行<span class="caret" ></span></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>代购商品</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>代缴公用事业费</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>陪同散步</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>陪同购物</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="btn-group">
+                              <button class="btn btn-lg btn-warning-outline dropdown-toggle" data-toggle="dropdown">助餐<span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>上门做餐</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>送餐上门</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>陪同进餐</a>
+                                </li>
+                              </ul>
+                            </div>
+                            
+                            <div class="btn-group">
+                              <button class="btn btn-lg btn-success-outline dropdown-toggle" data-toggle="dropdown">助洁<span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>清洗被子衣物</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>上门打扫</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>理发</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>剪甲</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>帮助洗浴擦身</a>
+                                </li>
+                              </ul>
+                            </div>
+                            <div class="btn-group">
+                              <button class="btn btn-lg btn-info-outline dropdown-toggle" data-toggle="dropdown">助医<span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>代配药</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>陪医就诊</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>康复指导</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>测量血压</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>心理指导</a>
+                                </li>
+                              </ul>
+                            </div>
+                            
+                            <div class="btn-group">
+                              <button class="btn btn-lg btn-danger-outline dropdown-toggle" data-toggle="dropdown">助急<span class="caret"></span></button>
+                              <ul class="dropdown-menu">
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>简单家电维修</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>下水道疏通</a>
+                                </li>
+                                <li>
+                                  <a href="javascrpt:void(0)"><i class="icon-plus-sign"></i>其他</a>
+                                </li>
+                              </ul>
+                            </div>
+                          </div>
+                          </div>
+                          <!-- end -->
+                          <div class="form-group">
+                            <label for="name">服务备注：</label><input class="form-control" id="remark" placeholder="非必填写项。请输入您对服务提供者的要求，例：脾气好/不抽烟/不喝酒等" type="text" required="false">
+                          </div>
+                        </form>
+                      </div>
+                      <div class="tab-pane" id="tab2">
+                        <h2>
+                          为您智能匹配服务提供者
+                        </h2>
+                        <!-- Hover Row Table -->
+                        <div class="col-lg-12">
+                          <div class="widget-container fluid-height clearfix">
+                            <div class="heading">
+                              <i class="icon-table"></i>与您需求最匹配的3个候选服务提供者
+                            </div>
+                            <div class="widget-content padded clearfix">
+                              <table class="table table-hover">
+                                <thead>
+                                  <th>
+                                    姓名
+                                  </th>
+                                  <th>
+                                    年龄
+                                  </th>
+                                  <th>
+                                    账户余额
+                                  </th>
+                                  <th class="hidden-xs">
+                                    经济条件
+                                  </th>
+                                  <th class="hidden-xs">
+                                    利用率
+                                  </th>
+                                  <th class="hidden-xs">
+                                    星级
+                                  </th>
+                                  <th class="hidden-xs">
+                                    匹配程度
+                                  </th>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>
+                                      王永强
+                                    </td>
+                                    <td>
+                                      58
+                                    </td>
+                                    <td>
+                                      89h
+                                    </td>
+                                    <td class="hidden-xs">
+                                      好
+                                    </td>
+                                    <td class="hidden-xs">
+                                      62%
+                                    </td>
+                                    <td class="hidden-xs">
+                                      5星
+                                    </td>
+                                    <td class="hidden-xs">
+                                      <span class="label label-success">96%</span>
+                                    </td>
+                                  </tr>
+                                  <tr>
+                                    <td>
+                                      刘二娘
+                                    </td>
+                                    <td>
+                                      55
+                                    </td>
+                                    <td>
+                                      65h
+                                    </td>
+                                    <td class="hidden-xs">
+                                      较好
+                                    </td>
+                                    <td class="hidden-xs">
+                                      43%
+                                    </td>
+                                    <td class="hidden-xs">
+                                      5星
+                                    </td>
+                                    <td class="hidden-xs">
+                                      <span class="label label-warning">75%</span>
+                                    </td>
+                                  </tr>
+                                 
+                                  <tr>
+                                    <td>
+                                      李有才
+                                    </td>
+                                    <td>
+                                      61
+                                    </td>
+                                    <td>
+                                      19h
+                                    </td>
+                                    <td class="hidden-xs">
+                                      一般
+                                    </td>
+                                    <td class="hidden-xs">
+                                      56%
+                                    </td>
+                                    <td class="hidden-xs">
+                                      3星
+                                    </td>
+                                    <td class="hidden-xs">
+                                      <span class="label label-danger">59%</span>
+                                    </td>
+                                  </tr>
+                                 
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- end Hover Row Table -->
+                      </div>
+                      <div class="tab-pane" id="tab3">
+                        <h2>
+                          完成服务交易
+                        </h2>
+                       <div class="container-fluid main-content">
+        
+        
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="row invoice-header">
+                <div class="col-md-6">
+                 <!-- <img width="183" src="images/sn-logo%402x.png" />-->
+                </div>
+                <div class="col-md-6 text-right">
+                  <!--
+                  <h2>
+                    #4815162342
+                  </h2>
+                  -->
+                  <p>
+                    2014年11月08日
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="well">
+                <strong>服务提供方</strong>
+                <h3>
+                  王永强
+                </h3>
+                <p>
+                  Tel:13812346546<br>西安市碑林区 长安中路239号403室
+                </p>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="well">
+                <strong>服务需求方</strong>
+                <h3>
+                  李兴平
+                </h3>
+                <p>
+                  Tel:13866662468<br>西安市碑林区 雁塔路中段13号
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="widget-container fluid-height">
+                <div class="widget-content padded clearfix">
+                  <table class="table table-striped ">
+                    <thead>
+                      <th width="80">类别</th>
+                      <th width="200">
+                        项目
+                      </th>
+                      <th>
+                        详情
+                      </th>
+                      <th width="200">
+                        订单备注
+                      </th>
+                      <th width="100">
+                        消费(小时)
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          助行
+                        </td>
+                        <td>
+                          代购商品
+                        </td>
+                        <td>
+                          陪同去超市选购商品，给儿子买份实用的礼物。
+                        </td>
+                        <td>
+                          不吸烟，会砍价
+                        </td>                        
+                        <td>
+                          2h
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      
+                      <tr>
+                        <td class="text-right" colspan="4"  style="padding-right=-100px">
+                          <h4 class="text-primary">
+                            总计
+                          </h4>
+                        </td>
+                        <td>
+                          <h4 class="text-right text-primary">
+                            2小时
+                          </h4>
+                        </td>
+                      </tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+       
+         
+       
+                      </div>
+                    </div>
+                  </div>
+                  <div class="pager">
+                    <div class="btn btn-default-outline btn-previous">
+                      <i class="icon-long-arrow-left"></i>上一步
+                    </div>
+                    <div class="btn btn-primary-outline btn-next">
+                      继续<i class="icon-long-arrow-right"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end步骤流程 -->
+        
+        <!-- end DataTables Example -->
+          <!-- End Pie Graph 1 -->
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

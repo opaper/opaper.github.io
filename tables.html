@@ -1,0 +1,1030 @@
+<html>
+  
+<head>
+    <title>
+      se7en - Dashboard
+    </title>
+    <link href="stylesheets/css.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/isotope.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/fullcalendar.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/wizard.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/select2.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/morris.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/timepicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/colorpicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/bootstrap-switch.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/daterange-picker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/typeahead.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/summernote.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/pygments.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" type="text/css" /><link href="stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" type="text/css" /><link href="stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" type="text/css" /><link href="stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" type="text/css" /><script src="http://code.jquery.com/jquery-1.10.2.min.js" type="text/javascript"></script><script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js" type="text/javascript"></script><script src="javascripts/bootstrap.min.js" type="text/javascript"></script><script src="javascripts/raphael.min.js" type="text/javascript"></script><script src="javascripts/selectivizr-min.js" type="text/javascript"></script><script src="javascripts/jquery.mousewheel.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.min.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.sampledata.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.world.js" type="text/javascript"></script><script src="javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script><script src="javascripts/fullcalendar.min.js" type="text/javascript"></script><script src="javascripts/gcal.js" type="text/javascript"></script><script src="javascripts/jquery.dataTables.min.js" type="text/javascript"></script><script src="javascripts/datatable-editable.js" type="text/javascript"></script><script src="javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script><script src="javascripts/excanvas.min.js" type="text/javascript"></script><script src="javascripts/jquery.isotope.min.js" type="text/javascript"></script><script src="javascripts/isotope_extras.js" type="text/javascript"></script><script src="javascripts/modernizr.custom.js" type="text/javascript"></script><script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script><script src="javascripts/select2.js" type="text/javascript"></script><script src="javascripts/styleswitcher.js" type="text/javascript"></script><script src="javascripts/wysiwyg.js" type="text/javascript"></script><script src="javascripts/summernote.min.js" type="text/javascript"></script><script src="javascripts/jquery.inputmask.min.js" type="text/javascript"></script><script src="javascripts/jquery.validate.js" type="text/javascript"></script><script src="javascripts/bootstrap-fileupload.js" type="text/javascript"></script><script src="javascripts/bootstrap-datepicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-timepicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-colorpicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-switch.min.js" type="text/javascript"></script><script src="javascripts/typeahead.js" type="text/javascript"></script><script src="javascripts/daterange-picker.js" type="text/javascript"></script><script src="javascripts/date.js" type="text/javascript"></script><script src="javascripts/morris.min.js" type="text/javascript"></script><script src="javascripts/skycons.js" type="text/javascript"></script><script src="javascripts/fitvids.js" type="text/javascript"></script><script src="javascripts/jquery.sparkline.min.js" type="text/javascript"></script><script src="javascripts/main.js" type="text/javascript"></script><script src="javascripts/respond.js" type="text/javascript"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+  <body>
+    <div class="modal-shiftfix">
+      <!-- Navigation -->
+      <div class="navbar navbar-fixed-top scroll-hide">
+        <div class="container-fluid top-bar">
+          <div class="pull-right">
+            <ul class="nav navbar-nav pull-right">
+              <li class="dropdown notifications hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-flag"></span>
+                  <div class="sr-only">
+                    Notifications
+                  </div>
+                  <p class="counter">
+                    4
+                  </p>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      New user added: Jane Smith
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      Sales targets available
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      New performance metric added
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                      New growth data available
+                    </p></a>
+                    
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown messages hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-envelope"></span>
+                  <div class="sr-only">
+                    Messages
+                  </div>
+                  <p class="counter">
+                    3
+                  </p>
+                </a>
+                <ul class="dropdown-menu messages">
+                  <li><a href="#">
+                    <img width="34" height="34" src="images/avatar-male2.png" />Could we meet today? I wanted...</a>
+                  </li>
+                  <li><a href="#">
+                    <img width="34" height="34" src="images/avatar-female.png" />Important data needs your analysis...</a>
+                  </li>
+                  <li><a href="#">
+                    <img width="34" height="34" src="images/avatar-male2.png" />Buy Se7en today, it's a great theme...</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown settings hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-gear"></span>
+                  <div class="sr-only">
+                    Settings
+                  </div>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>Blue</a>
+                  </li>
+                  <li>
+                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>Green</a>
+                  </li>
+                  <li>
+                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>Orange</a>
+                  </li>
+                  <li>
+                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>Magenta</a>
+                  </li>
+                  <li>
+                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>Gray</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img width="34" height="34" src="images/avatar-male.jpg" />John Smith<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">
+                    <i class="icon-user"></i>My Account</a>
+                  </li>
+                  <li><a href="#">
+                    <i class="icon-gear"></i>Account Settings</a>
+                  </li>
+                  <li><a href="login1.html">
+                    <i class="icon-signout"></i>Logout</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index-2.html">se7en</a>
+          <form class="navbar-form form-inline col-lg-2 hidden-xs">
+            <input class="form-control" placeholder="Search" type="text">
+          </form>
+        </div>
+        <div class="container-fluid main-nav clearfix">
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="index-2.html"><span aria-hidden="true" class="se7en-home"></span>Dashboard</a>
+              </li>
+              <li><a href="social.html">
+                <span aria-hidden="true" class="se7en-feed"></span>Social Feed</a>
+              </li>
+              <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-star"></span>Features<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a href="buttons.html">Buttons</a>
+                  </li>
+                  <li>
+                    <a href="fontawesome.html">Font Awesome Icons</a>
+                  </li>
+                  <li><a href="glyphicons.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Glyphicons
+                    </p></a>
+                    
+                  </li>
+                  <li>
+                    <a href="components.html">Components</a>
+                  </li>
+                  <li>
+                    <a href="widgets.html">Widgets</a>
+                  </li>
+                  <li>
+                    <a href="typo.html">Typography</a>
+                  </li>
+                  <li>
+                    <a href="grid.html">Grid Layout</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-forms"></span>Forms<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="form-components.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Form Components
+                    </p></a>
+                    
+                  </li>
+                  <li>
+                    <a href="form-advanced.html">Advanced Forms</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown current"><a data-toggle="dropdown" class="current" href="#">
+                <span aria-hidden="true" class="se7en-tables"></span>Tables<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="current" href="tables.html">Basic tables</a>
+                  </li>
+                  <li>
+                    <a href="datatables.html">DataTables</a>
+                  </li>
+                  <li><a href="datatables-editable.html">
+                    <div class="notifications label label-warning">
+                      New
+                    </div>
+                    <p>
+                      Editable DataTables
+                    </p></a>
+                    
+                  </li>
+                </ul>
+              </li>
+              <li><a href="charts.html">
+                <span aria-hidden="true" class="se7en-charts"></span>Charts</a>
+              </li>
+              <li class="dropdown"><a data-toggle="dropdown" href="#">
+                <span aria-hidden="true" class="se7en-pages"></span>Pages<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="chat.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Chat
+                    </p></a>
+                    
+                  </li>
+                  <li>
+                    <a href="calendar.html">Calendar</a>
+                  </li>
+                  <li><a href="timeline.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Timeline
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="login1.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Login 1
+                    </p></a>
+                    
+                  </li>
+                  <li>
+                    <a href="login2.html">Login 2</a>
+                  </li>
+                  <li><a href="signup1.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Sign Up 1
+                    </p></a>
+                    
+                  </li>
+                  <li>
+                    <a href="signup2.html">Sign Up 2</a>
+                  </li>
+                  <li><a href="invoice.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      Invoice
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="faq.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                      FAQ
+                    </p></a>
+                    
+                  </li>
+                  <li>
+                    <a href="filters.html">Filter Results</a>
+                  </li>
+                  <li>
+                    <a href="404-page.html">404 Page</a>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="gallery.html">
+                <span aria-hidden="true" class="se7en-gallery"></span>Gallery</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Navigation -->
+      <div class="container-fluid main-content">
+        <div class="page-title">
+          <h1>
+            Basic Tables
+          </h1>
+        </div>
+        <div class="row">
+          <!-- Basic Table -->
+          <div class="col-lg-6">
+            <div class="widget-container fluid-height clearfix">
+              <div class="heading">
+                <i class="icon-table"></i>Basic Table
+              </div>
+              <div class="widget-content padded clearfix">
+                <table class="table">
+                  <thead>
+                    <th>
+                      First Name
+                    </th>
+                    <th>
+                      Last Name
+                    </th>
+                    <th>
+                      Email
+                    </th>
+                    <th class="hidden-xs">
+                      Date Added
+                    </th>
+                    <th class="hidden-xs">
+                      Status
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Robert
+                      </td>
+                      <td>
+                        Kelso
+                      </td>
+                      <td>
+                        robert@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        John
+                      </td>
+                      <td>
+                        Dorian
+                      </td>
+                      <td>
+                        john@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Olivia
+                      </td>
+                      <td>
+                        Benson
+                      </td>
+                      <td>
+                        olivia@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Elliot
+                      </td>
+                      <td>
+                        Stabler
+                      </td>
+                      <td>
+                        elliot@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-danger">Rejected</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Maggie
+                      </td>
+                      <td>
+                        Smith
+                      </td>
+                      <td>
+                        maggie@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end Basic Table --><!-- Bordered Table -->
+          <div class="col-lg-6">
+            <div class="widget-container fluid-height clearfix">
+              <div class="heading">
+                <i class="icon-table"></i>Bordered Table
+              </div>
+              <div class="widget-content padded clearfix">
+                <table class="table table-bordered">
+                  <thead>
+                    <th>
+                      First Name
+                    </th>
+                    <th>
+                      Last Name
+                    </th>
+                    <th>
+                      Email
+                    </th>
+                    <th class="hidden-xs">
+                      Date Added
+                    </th>
+                    <th class="hidden-xs">
+                      Status
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Robert
+                      </td>
+                      <td>
+                        Kelso
+                      </td>
+                      <td>
+                        robert@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        John
+                      </td>
+                      <td>
+                        Dorian
+                      </td>
+                      <td>
+                        john@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Olivia
+                      </td>
+                      <td>
+                        Benson
+                      </td>
+                      <td>
+                        olivia@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Elliot
+                      </td>
+                      <td>
+                        Stabler
+                      </td>
+                      <td>
+                        elliot@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-danger">Rejected</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Maggie
+                      </td>
+                      <td>
+                        Smith
+                      </td>
+                      <td>
+                        maggie@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end Bordered Table -->
+        </div>
+        <div class="row">
+          <!-- Striped Table -->
+          <div class="col-lg-6">
+            <div class="widget-container fluid-height clearfix">
+              <div class="heading">
+                <i class="icon-table"></i>Striped Table
+              </div>
+              <div class="widget-content padded clearfix">
+                <table class="table table-striped">
+                  <thead>
+                    <th>
+                      First Name
+                    </th>
+                    <th>
+                      Last Name
+                    </th>
+                    <th>
+                      Email
+                    </th>
+                    <th class="hidden-xs">
+                      Date Added
+                    </th>
+                    <th class="hidden-xs">
+                      Status
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Robert
+                      </td>
+                      <td>
+                        Kelso
+                      </td>
+                      <td>
+                        robert@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        John
+                      </td>
+                      <td>
+                        Dorian
+                      </td>
+                      <td>
+                        john@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Olivia
+                      </td>
+                      <td>
+                        Benson
+                      </td>
+                      <td>
+                        olivia@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Elliot
+                      </td>
+                      <td>
+                        Stabler
+                      </td>
+                      <td>
+                        elliot@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-danger">Rejected</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Maggie
+                      </td>
+                      <td>
+                        Smith
+                      </td>
+                      <td>
+                        maggie@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end Striped Table --><!-- Condensed Table -->
+          <div class="col-lg-6">
+            <div class="widget-container fluid-height clearfix">
+              <div class="heading">
+                <i class="icon-table"></i>Condensed Table
+              </div>
+              <div class="widget-content padded clearfix">
+                <table class="table table-condensed">
+                  <thead>
+                    <th>
+                      First Name
+                    </th>
+                    <th>
+                      Last Name
+                    </th>
+                    <th>
+                      Email
+                    </th>
+                    <th class="hidden-xs">
+                      Date Added
+                    </th>
+                    <th class="hidden-xs">
+                      Status
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Robert
+                      </td>
+                      <td>
+                        Kelso
+                      </td>
+                      <td>
+                        robert@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        John
+                      </td>
+                      <td>
+                        Dorian
+                      </td>
+                      <td>
+                        john@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Olivia
+                      </td>
+                      <td>
+                        Benson
+                      </td>
+                      <td>
+                        olivia@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Elliot
+                      </td>
+                      <td>
+                        Stabler
+                      </td>
+                      <td>
+                        elliot@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-danger">Rejected</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Maggie
+                      </td>
+                      <td>
+                        Smith
+                      </td>
+                      <td>
+                        maggie@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Lavar
+                      </td>
+                      <td>
+                        Burton
+                      </td>
+                      <td>
+                        lavar@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end Condensed Table -->
+        </div>
+        <div class="row">
+          <!-- Hover Row Table -->
+          <div class="col-lg-6">
+            <div class="widget-container fluid-height clearfix">
+              <div class="heading">
+                <i class="icon-table"></i>Hover Rows
+              </div>
+              <div class="widget-content padded clearfix">
+                <table class="table table-hover">
+                  <thead>
+                    <th>
+                      First Name
+                    </th>
+                    <th>
+                      Last Name
+                    </th>
+                    <th>
+                      Email
+                    </th>
+                    <th class="hidden-xs">
+                      Date Added
+                    </th>
+                    <th class="hidden-xs">
+                      Status
+                    </th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>
+                        Robert
+                      </td>
+                      <td>
+                        Kelso
+                      </td>
+                      <td>
+                        robert@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        John
+                      </td>
+                      <td>
+                        Dorian
+                      </td>
+                      <td>
+                        john@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-warning">Pending</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Olivia
+                      </td>
+                      <td>
+                        Benson
+                      </td>
+                      <td>
+                        olivia@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Elliot
+                      </td>
+                      <td>
+                        Stabler
+                      </td>
+                      <td>
+                        elliot@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-danger">Rejected</span>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        Maggie
+                      </td>
+                      <td>
+                        Smith
+                      </td>
+                      <td>
+                        maggie@gmail.com
+                      </td>
+                      <td class="hidden-xs">
+                        8-15-2013
+                      </td>
+                      <td class="hidden-xs">
+                        <span class="label label-success">Approved</span>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+          <!-- end Hover Row Table --><!-- Responsive Table -->
+          <div class="col-lg-6">
+            <div class="widget-container fluid-height clearfix">
+              <div class="heading">
+                <i class="icon-table"></i>Responsive Table
+              </div>
+              <div class="widget-content padded clearfix">
+                <div class="table-responsive">
+                  <table class="table">
+                    <thead>
+                      <th>
+                        First Name
+                      </th>
+                      <th>
+                        Last Name
+                      </th>
+                      <th>
+                        Email
+                      </th>
+                      <th>
+                        Date Added
+                      </th>
+                      <th>
+                        Location
+                      </th>
+                      <th>
+                        Status
+                      </th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          Robert
+                        </td>
+                        <td>
+                          Kelso
+                        </td>
+                        <td>
+                          robert@gmail.com
+                        </td>
+                        <td>
+                          8-15-2013
+                        </td>
+                        <td>
+                          United Kingdom
+                        </td>
+                        <td>
+                          <span class="label label-success">Approved</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          John
+                        </td>
+                        <td>
+                          Dorian
+                        </td>
+                        <td>
+                          john@gmail.com
+                        </td>
+                        <td>
+                          8-15-2013
+                        </td>
+                        <td>
+                          United Kingdom
+                        </td>
+                        <td>
+                          <span class="label label-warning">Pending</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Olivia
+                        </td>
+                        <td>
+                          Benson
+                        </td>
+                        <td>
+                          olivia@gmail.com
+                        </td>
+                        <td>
+                          8-15-2013
+                        </td>
+                        <td>
+                          United Kingdom
+                        </td>
+                        <td>
+                          <span class="label label-success">Approved</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Elliot
+                        </td>
+                        <td>
+                          Stabler
+                        </td>
+                        <td>
+                          elliot@gmail.com
+                        </td>
+                        <td>
+                          8-15-2013
+                        </td>
+                        <td>
+                          United Kingdom
+                        </td>
+                        <td>
+                          <span class="label label-danger">Rejected</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          Maggie
+                        </td>
+                        <td>
+                          Smith
+                        </td>
+                        <td>
+                          maggie@gmail.com
+                        </td>
+                        <td>
+                          8-15-2013
+                        </td>
+                        <td>
+                          United Kingdom
+                        </td>
+                        <td>
+                          <span class="label label-success">Approved</span>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- end Responsive Table -->
+        </div>
+      </div>
+    </div>
+  </body>
+
+</html>

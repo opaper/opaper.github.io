@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="UTF-8">
+<head>
+    <title>
+      我的时间银行- 基于老年人互助养老模式的时间银行
+    </title>
+    <link href="stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/isotope.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/fullcalendar.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/wizard.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/select2.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/morris.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/timepicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/colorpicker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/bootstrap-switch.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/daterange-picker.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/typeahead.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/summernote.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/pygments.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/style.css" media="all" rel="stylesheet" type="text/css" /><link href="stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" type="text/css" /><link href="stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" type="text/css" /><link href="stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" type="text/css" /><link href="stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" type="text/css" /><script src="javascripts/jquery-1.10.2.min.js" type="text/javascript"></script><script src="javascripts/jquery-ui.js" type="text/javascript"></script><script src="javascripts/bootstrap.min.js" type="text/javascript"></script><script src="javascripts/raphael.min.js" type="text/javascript"></script><script src="javascripts/selectivizr-min.js" type="text/javascript"></script><script src="javascripts/jquery.mousewheel.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.min.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.sampledata.js" type="text/javascript"></script><script src="javascripts/jquery.vmap.world.js" type="text/javascript"></script><script src="javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script><script src="javascripts/fullcalendar.min.js" type="text/javascript"></script><script src="javascripts/gcal.js" type="text/javascript"></script><script src="javascripts/jquery.dataTables.min.js" type="text/javascript"></script><script src="javascripts/datatable-editable.js" type="text/javascript"></script><script src="javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script><script src="javascripts/excanvas.min.js" type="text/javascript"></script><script src="javascripts/jquery.isotope.min.js" type="text/javascript"></script><script src="javascripts/isotope_extras.js" type="text/javascript"></script><script src="javascripts/modernizr.custom.js" type="text/javascript"></script><script src="javascripts/jquery.fancybox.pack.js" type="text/javascript"></script><script src="javascripts/select2.js" type="text/javascript"></script><script src="javascripts/styleswitcher.js" type="text/javascript"></script><script src="javascripts/wysiwyg.js" type="text/javascript"></script><script src="javascripts/summernote.min.js" type="text/javascript"></script><script src="javascripts/jquery.inputmask.min.js" type="text/javascript"></script><script src="javascripts/jquery.validate.js" type="text/javascript"></script><script src="javascripts/bootstrap-fileupload.js" type="text/javascript"></script><script src="javascripts/bootstrap-datepicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-timepicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-colorpicker.js" type="text/javascript"></script><script src="javascripts/bootstrap-switch.min.js" type="text/javascript"></script><script src="javascripts/typeahead.js" type="text/javascript"></script><script src="javascripts/daterange-picker.js" type="text/javascript"></script><script src="javascripts/date.js" type="text/javascript"></script><script src="javascripts/morris.min.js" type="text/javascript"></script><script src="javascripts/skycons.js" type="text/javascript"></script><script src="javascripts/fitvids.js" type="text/javascript"></script><script src="javascripts/jquery.sparkline.min.js" type="text/javascript"></script><script src="javascripts/main.js" type="text/javascript"></script><script src="javascripts/respond.js" type="text/javascript"></script>
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+  </head>
+  <body>
+    <div class="modal-shiftfix">
+      <!-- Navigation -->
+      <div class="navbar navbar-fixed-top scroll-hide">
+        <div class="container-fluid top-bar">
+          <div class="pull-right">
+            <ul class="nav navbar-nav pull-right">
+              <li class="dropdown notifications hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-flag"></span>
+                  <div class="sr-only">
+                    通知
+                  </div>
+                  <p class="counter">
+                    4
+                  </p>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        助餐服务可以请大厨到家做大餐！
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        新增助行服务，欢迎体验！
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        您已累计存入119小时的时间存款！
+                    </p></a>
+                    
+                  </li>
+                  <li><a href="#">
+                    <div class="notifications label label-info">
+                      New
+                    </div>
+                    <p>
+                        恭喜您，李兴平！您已成为时间银行的会员！
+                    </p></a>
+                    
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown messages hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-envelope"></span>
+                  <div class="sr-only">
+                    消息
+                  </div>
+                  <p class="counter">
+                    3
+                  </p>
+                </a>
+                <ul class="dropdown-menu messages">
+                  <li><a href="#">
+                    <img width="34" height="34" src="images/avatar-female.jpg" />今天能麻烦您跑一趟吗？</a>
+                  </li>
+                  <li><a href="#">
+                    <img width="34" height="34" src="images/avatar-female2.png" />非常感谢你照料父亲的饮食，帮了大忙...</a>
+                  </li>
+                  <li><a href="#">
+                    <img width="34" height="34" src="images/avatar-male2.png" />我是您的助医服务提供者[苏二娘]，正在...</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown settings hidden-xs">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#"><span aria-hidden="true" class="se7en-gear"></span>
+                  <div class="sr-only" title="设置">
+                      设置
+                  </div>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                    <a class="settings-link blue" href="javascript:chooseStyle('none', 30)"><span></span>蓝</a>
+                  </li>
+                  <li>
+                    <a class="settings-link green" href="javascript:chooseStyle('green-theme', 30)"><span></span>绿</a>
+                  </li>
+                  <li>
+                    <a class="settings-link orange" href="javascript:chooseStyle('orange-theme', 30)"><span></span>橙</a>
+                  </li>
+                  <li>
+                    <a class="settings-link magenta" href="javascript:chooseStyle('magenta-theme', 30)"><span></span>紫</a>
+                  </li>
+                  <li>
+                    <a class="settings-link gray" href="javascript:chooseStyle('gray-theme', 30)"><span></span>灰</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="dropdown user hidden-xs"><a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                <img width="34" height="34" src="images/avatar-male.jpg" />李兴平&nbsp;(119h)<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="record.html">
+                    <i class="icon-user"></i>我的账单&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+                  </li>
+                  <li><a href="#">
+                    <i class="icon-gear"></i>设置</a>
+                  </li>
+                  <li><a href="login.html">
+                    <i class="icon-signout"></i>注销</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <button class="navbar-toggle"><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a class="logo" href="index.html">基于老年人互助养老模式的时间银行系统</a>
+          <form class="navbar-form form-inline col-lg-2 hidden-xs" action="services.html">
+            <input class="form-control" placeholder="搜索服务匹配" type="text">
+          </form>
+        </div>
+        <div class="container-fluid main-nav clearfix">
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a href="index.html"><span aria-hidden="true" class="se7en-home"></span>我的银行</a>
+              </li>
+               <li class="dropdown"><a data-toggle="dropdown" href="services.html">
+                <span aria-hidden="true" class="se7en-forms"></span>服务<b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="services.html">
+                    <span class="notifications label label-warning">New</span>
+                    <p>
+                        助餐
+                    </p></a>
+                  </li>
+                  <li>
+                    <a href="#">助行</a>
+                  </li>
+                  <li>
+                    <a href="#">助洁</a>
+                  </li>
+                  <li>
+                    <a href="#">助医</a>
+                  </li>
+                  <li>
+                    <a href="#">助急</a>
+                  </li>
+                </ul>
+              </li>
+        <li><a href="charts.html">
+                <span aria-hidden="true" class="se7en-charts"></span>评价</a>
+              </li>
+              <li><a class="current" href="social.html">
+                <span aria-hidden="true" class="se7en-feed"></span>社交</a>
+              </li>
+              <li><a href="favorite.html">
+                <span aria-hidden="true" class="se7en-star"></span>收藏</a>
+              </li>
+              <li><a href="timeline.html">
+                <span aria-hidden="true" class="se7en-gallery"></span>记录</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Navigation -->
+      <div class="container-fluid main-content"><div class="social-wrapper">
+  <div id="social-container"></div>
+  <div class="row">
+    <div class="col-lg-12">
+      <div class="btn btn-lg btn-block btn-default" id="load-more">
+        <i class="icon-spinner icon-spin"></i>更多
+      </div>
+    </div>
+  </div>
+  <div id="hidden-items">
+    <!-- Share Form -->
+    <div class="item widget-container share-widget fluid-height clearfix">
+      <div class="widget-content padded">
+        <textarea class="form-control" placeholder="跟大家分享你的互助故事..." rows="4"></textarea>
+      </div>
+      <div class="clearfix">
+        <div class="col-xs-3 share-options active">
+          <i class="icon-pencil"></i>
+          <p>
+            文字
+          </p>
+        </div>
+        <div class="col-xs-3 share-options">
+          <i class="icon-camera"></i>
+          <p>
+            照片
+          </p>
+        </div>
+        <div class="col-xs-3 share-options">
+          <i class="icon-link"></i>
+          <p>
+            链接
+          </p>
+        </div>
+        <div class="col-xs-3 share-options">
+          <i class="icon-youtube-play"></i>
+          <p>
+            视频
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- end Share Form --><!-- Profile Widget -->
+    <div class="item widget-container fluid-height profile-widget">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="70" height="70" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details">
+            <a class="user-name" href="#">李兴平</a>
+            <p>
+              碑林雁塔路中段13号
+            </p>
+            <em><i class="icon-map-marker"></i>西安市</em>
+          </div>
+        </div>
+        <div class="profile-stats">
+          <div class="col-xs-4">
+            <a href="#">
+              <h2>
+                245
+              </h2>
+            </a>
+            <p>
+              心情
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <a href="#">
+              <h2>
+                150
+              </h2>
+            </a>
+            <p>
+              朋友
+            </p>
+          </div>
+          <div class="col-xs-4">
+            <a href="#">
+              <h2>
+                12
+              </h2>
+            </a>
+            <p>
+              视频
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end Profile Widget --><!-- Text Post -->
+    <div class="item widget-container fluid-height social-entry">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">孙嘉娘</a>
+            <p>
+              <em>2天前</em>
+            </p>
+          </div>
+        </div>
+        <p class="content">
+          帮助咋小区的张大爷做了一顿丰盛的午餐，他还夸我做菜特别好吃！嘿嘿，能帮助到别人真开心！
+        </p>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-thumbs-up-alt"></i>
+        </div>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-mail-forward"></i>
+        </div>
+      </div>
+      <div class="comments padded">
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-female.png" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">李民</a>
+            <p>
+              <em>1天前</em>
+            </p>
+          </div>
+          <p class="content">
+            咦，原来我们一个小区呢！以后常联系哈！
+          </p>
+        </div>
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">李二柱</a>
+            <p>
+              <em>16分钟前</em>
+            </p>
+          </div>
+          <p class="content">
+            赞！
+          </p>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="item social-widget twitter">
+      <i class="icon-twitter"></i>
+      <div class="social-data">
+        <h1>
+          16k
+        </h1>
+        Followers
+      </div>
+    </div>
+    <!-- 
+    <div class="item widget-container clearfix social-entry">
+      <div class="widget-content">
+        <div class="profile-info clearfix padded">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-male2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Sad Franklin</a>
+            <p>
+              <em>12 days ago</em>
+            </p>
+          </div>
+        </div>
+        <img width="350" height="262" class="social-content-media" src="images/social-image.jpg" />
+        <div class="padded">
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+          </p>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-thumbs-up-alt"></i>
+          </div>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-mail-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="comments padded">
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end Media Post --><!-- 
+    <div class="item widget-container fluid-height social-entry">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Stan Humanbot</a>
+            <p>
+              <em>2 days ago</em>
+            </p>
+          </div>
+        </div>
+        <p class="content">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra.
+        </p>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-thumbs-up-alt"></i>
+        </div>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-mail-forward"></i>
+        </div>
+      </div>
+      <div class="comments padded">
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">John Smith</a>
+            <p>
+              <em>16 minutes ago</em>
+            </p>
+          </div>
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          </p>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="item social-widget facebook">
+      <i class="icon-facebook-sign"></i>
+      <div class="social-data">
+        <h1>
+          120
+        </h1>
+        Likes
+      </div>
+    </div>
+    <!--
+    <div class="item widget-container clearfix social-entry">
+      <div class="widget-content">
+        <div class="profile-info clearfix padded">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-male2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Sad Franklin</a>
+            <p>
+              <em>12 days ago</em>
+            </p>
+          </div>
+        </div>
+        <img width="350" height="262" class="social-content-media" src="../../../dribbble.s3.amazonaws.com/users/13774/screenshots/621770/_134.jpg" />
+        <div class="padded">
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-thumbs-up-alt"></i>
+          </div>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-mail-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="comments padded">
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">John Smith</a>
+            <p>
+              <em>16 minutes ago</em>
+            </p>
+          </div>
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          </p>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="item widget-container fluid-height social-entry">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Stan Humanbot</a>
+            <p>
+              <em>2 days ago</em>
+            </p>
+          </div>
+        </div>
+        <p class="content">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
+        </p>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-thumbs-up-alt"></i>
+        </div>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-mail-forward"></i>
+        </div>
+      </div>
+      <div class="comments padded">
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="item social-widget instagram">
+      <i class="icon-instagram"></i>
+      <div class="social-data">
+        <h1>
+          120k
+        </h1>
+        Followers
+      </div>
+    </div>
+    <!-- 
+    <div class="item widget-container fluid-height social-entry">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Stan Humanbot</a>
+            <p>
+              <em>2 days ago</em>
+            </p>
+          </div>
+        </div>
+        <p class="content">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+        </p>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-thumbs-up-alt"></i>
+        </div>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-mail-forward"></i>
+        </div>
+      </div>
+      <div class="comments padded">
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-female.png" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">Fishy Robertson</a>
+            <p>
+              <em>1 day ago</em>
+            </p>
+          </div>
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          </p>
+        </div>
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">John Smith</a>
+            <p>
+              <em>16 minutes ago</em>
+            </p>
+          </div>
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          </p>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end Text Post --><!-- Media Post -->
+    <div class="item widget-container clearfix social-entry">
+      <div class="widget-content">
+        <div class="profile-info clearfix padded">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-male2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">吴应天</a>
+            <p>
+              <em>7天前</em>
+            </p>
+          </div>
+        </div>
+        <img width="350" height="262" class="social-content-media" src="images/manofscience.jpg" />
+        <div class="padded">
+          <p class="content">
+            在家瞎鼓捣，居然把旧电视机修好了耶，以后请叫我厉害的吴师傅，哈哈！
+          </p>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-thumbs-up-alt"></i>
+          </div>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-mail-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="comments padded">
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="item social-widget pinterest">
+      <i class="icon-pinterest"></i>
+      <div class="social-data">
+        <h1>
+          230
+        </h1>
+        Repins
+      </div>
+    </div>
+    <!-- 
+    <div class="item widget-container fluid-height social-entry">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Stan Humanbot</a>
+            <p>
+              <em>2 days ago</em>
+            </p>
+          </div>
+        </div>
+        <p class="content">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi. Sed pretium, ligula sollicitudin laoreet viverra.
+        </p>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-thumbs-up-alt"></i>
+        </div>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-mail-forward"></i>
+        </div>
+      </div>
+      --
+      <div class="comments padded">
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">John Smith</a>
+            <p>
+              <em>16 minutes ago</em>
+            </p>
+          </div>
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros.
+          </p>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- -->
+    <div class="item widget-container clearfix social-entry">
+      <div class="widget-content">
+        <div class="profile-info clearfix padded">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-male2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">吴应天</a>
+            <p>
+              <em>15天前</em>
+            </p>
+          </div>
+        </div>
+        <img width="350" height="262" class="social-content-media" src="images/turntable_1x.jpg" />
+        <div class="padded">
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-thumbs-up-alt"></i>
+          </div>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-mail-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="comments padded">
+        <div class="comment">
+          <img width="40" height="40" class="social-avatar pull-left" src="images/avatar-male.jpg" />
+          <div class="profile-details clearfix">
+            <a class="user-name" href="#">李二柱</a>
+            <p>
+              <em>16分钟前</em>
+            </p>
+          </div>
+          <p class="content">
+            能学点音乐真好！
+          </p>
+        </div>
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- 
+    <div class="item social-widget dribbble">
+      <i class="icon-dribbble"></i>
+      <div class="social-data">
+        <h1>
+          185
+        </h1>
+        Rebounds
+      </div>
+    </div>
+    <!-- Text 
+    <div class="item widget-container fluid-height social-entry">
+      <div class="widget-content padded">
+        <div class="profile-info clearfix">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Stan Humanbot</a>
+            <p>
+              <em>2 days ago</em>
+            </p>
+          </div>
+        </div>
+        <p class="content">
+          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Phasellus hendrerit. Pellentesque aliquet nibh nec urna. In nisi neque, aliquet vel, dapibus id, mattis vel, nisi.
+        </p>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-thumbs-up-alt"></i>
+        </div>
+        <div class="btn btn-sm btn-default-outline">
+          <i class="icon-mail-forward"></i>
+        </div>
+      </div>
+      <div class="comments padded">
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div>
+    <!-- end Text Post --><!-- 
+    <div class="item widget-container fluid-height clearfix social-entry">
+      <div class="widget-content">
+        <div class="profile-info clearfix padded">
+          <img width="50" height="50" class="social-avatar pull-left" src="images/avatar-female2.png" />
+          <div class="profile-details">
+            <a class="user-name" href="#">Stan Humanbot</a>
+            <p>
+              <em>2 days ago</em>
+            </p>
+          </div>
+        </div>
+        <iframe allowfullscreen="" class="social-content-media" frameborder="0" height="200" mozallowfullscreen="" src="http://player.vimeo.com/video/73135695?title=0&amp;byline=0&amp;portrait=0&amp;color=ffffff" webkitallowfullscreen="" width="100%"></iframe>
+        <div class="padded">
+          <p class="content">
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Donec odio. Quisque volutpat mattis eros.
+          </p>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-thumbs-up-alt"></i>
+          </div>
+          <div class="btn btn-sm btn-default-outline">
+            <i class="icon-mail-forward"></i>
+          </div>
+        </div>
+      </div>
+      <div class="comments padded">
+        <form role="form">
+          <div class="form-group">
+            <input class="form-control" id="exampleInputEmail1" placeholder="添加评论..." type="email">
+          </div>
+        </form>
+      </div>
+    </div> -->
+  </div>
+</div>
+      </div>
+    </div>
+  </body>
+
+</html>
